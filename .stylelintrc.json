@@ -1,0 +1,35 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-rational-order",
+    "stylelint-config-html"
+  ],
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "order/properties-order": [],
+    "plugin/rational-order": [
+      true,
+      {
+        "border-in-box-model": false,
+        "empty-line-between-groups": true
+      }
+    ],
+    "declaration-empty-line-before": [
+      "always",
+      { "ignore": ["after-declaration"], "except": ["first-nested"] }
+    ],
+    "rule-empty-line-before": [
+      "always-multi-line",
+      { "except": ["first-nested"] }
+    ],
+    "color-hex-length": "long",
+    "selector-class-pattern": "\\w+",
+    "selector-id-pattern": null,
+    "property-no-unknown": [
+      true,
+      {
+        "ignoreProperties": ["text-fill-color"]
+      }
+    ]
+  }
+}
